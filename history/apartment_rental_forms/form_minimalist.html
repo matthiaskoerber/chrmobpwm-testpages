@@ -4,46 +4,98 @@
     <meta charset="UTF-8">
     <title>Application</title>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; padding: 50px; }
-        form { border-left: 2px solid #000; padding-left: 20px; width: 300px; }
-        div { margin-bottom: 20px; }
-        input { border: none; border-bottom: 1px solid #000; width: 100%; outline: none; padding: 5px 0; }
-        label { font-size: 12px; text-transform: uppercase; color: #666; }
-        button { background: #000; color: #fff; border: none; padding: 10px 20px; cursor: pointer; }
+        body { 
+            font-family: sans-serif; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            padding: 50px; 
+        }
+        form { 
+            border-left: 2px solid #000; 
+            padding-left: 20px; 
+            width: 300px; 
+            margin-bottom: 40px;
+        }
+        .form-group { 
+            margin-bottom: 20px; 
+        }
+        input { 
+            border: none; 
+            border-bottom: 1px solid #000; 
+            width: 100%; 
+            outline: none; 
+            padding: 5px 0; 
+        }
+        label { 
+            font-size: 12px; 
+            text-transform: uppercase; 
+            color: #666; 
+        }
+        button { 
+            background: #000; 
+            color: #fff; 
+            border: none; 
+            padding: 10px 20px; 
+            cursor: pointer; 
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+        .next-link-container {
+            text-align: center;
+        }
+        .next-link {
+            color: #666;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 3px;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+        .next-link:hover {
+            color: #000;
+            border-color: #000;
+        }
     </style>
 </head>
 <body>
     <form>
-        <div>
+        <div class="form-group">
             <label>Name</label>
             <input type="text" name="applicant_fullname">
         </div>
-        <div>
+        <div class="form-group">
             <label>Mobile</label>
             <input type="text" name="mobile_no">
         </div>
-        <div>
+        <div class="form-group">
             <label>Email</label>
             <input type="text" name="email_id">
         </div>
-        <div>
+        <div class="form-group">
             <label>Current City</label>
             <input type="text" name="current_city">
         </div>
-        <div>
-            <label>Total Income</label>
-            <input type="text" name="total_income_amount">
+        <div class="form-group">
+            <label>Annual Income (Yearly)</label>
+            <input type="text" name="total_income_amount" placeholder="e.g. 75000">
         </div>
-        <div>
+        <div class="form-group">
             <label>Move-in Date</label>
             <input type="text" name="move_in_date">
         </div>
-        <div>
+        <div class="form-group">
             <label>Occupant Details</label>
             <input type="text" name="occupant_details">
         </div>
         <button type="submit">Apply</button>
     </form>
-    <div style="margin-top: 20px; text-align: center; width: 100%;"><a href="form_formal.html">Next Form (Formal)</a></div>
+    
+    <div class="next-link-container">
+        <a href="form_formal.html" class="next-link">Next Form (Formal) &rarr;</a>
+    </div>
 </body>
 </html>
