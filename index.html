@@ -3,10 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Pages</title>
+    <title>Directory of Test Pages</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #f4f7f6;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        .directory-group {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        .directory-header {
+            background-color: #3498db;
+            color: white;
+            padding: 0.75rem 1.25rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-transform: capitalize;
+        }
+        .link-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .link-item {
+            border-bottom: 1px solid #eee;
+        }
+        .link-item:last-child {
+            border-bottom: none;
+        }
+        .link-item a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: #34495e;
+            text-decoration: none;
+            transition: background 0.2s ease;
+        }
+        .link-item a:hover {
+            background-color: #f0f7fd;
+            color: #2980b9;
+        }
+        .link-path {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 0.5rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Let's start</h1>
-    <p>Here we go</p>
+    <h1>Testing Pages Directory</h1>
+
+    <section class="directory-group">
+        <div class="directory-header">Root</div>
+        <ul class="link-list">
+            <li class="link-item"><a href="pizza.html">Pizza <span class="link-path">/pizza.html</span></a></li>
+            <li class="link-item"><a href="pizza_chat.html">Pizza Chat <span class="link-path">/pizza_chat.html</span></a></li>
+        </ul>
+    </section>
+
+    <section class="directory-group">
+        <div class="directory-header">Apartment Rental Forms</div>
+        <ul class="link-list">
+            <li class="link-item"><a href="history/apartment_rental_forms/form_casual.html">Casual Form <span class="link-path">/history/apartment_rental_forms/form_casual.html</span></a></li>
+            <li class="link-item"><a href="history/apartment_rental_forms/form_formal.html">Formal Form <span class="link-path">/history/apartment_rental_forms/form_formal.html</span></a></li>
+            <li class="link-item"><a href="history/apartment_rental_forms/form_minimalist.html">Minimalist Form <span class="link-path">/history/apartment_rental_forms/form_minimalist.html</span></a></li>
+        </ul>
+    </section>
+
 </body>
 </html>
