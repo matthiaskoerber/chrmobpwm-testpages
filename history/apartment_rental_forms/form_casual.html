@@ -49,9 +49,25 @@
                 <label>Got any pets? (Let us know!)</label>
                 <input type="text" name="any_pets">
             </p>
+            <button type="button" onclick="fillExampleData()">Fill with Example Data</button>
             <button type="submit">Send Message!</button>
         </form>
         <div style="margin-top: 20px; text-align: center;"><a href="form_minimalist.html">Next Form (Minimalist)</a></div>
+    </div>
+    <script>
+        function fillExampleData() {
+            document.querySelector('input[name="target_move_in"]').value = '2026-06-01';
+            document.querySelector('input[name="your_name"]').value = 'John Doe';
+            document.querySelector('input[name="contact_email"]').value = 'john.doe@example.com';
+            document.querySelector('input[name="cell_phone"]').value = '555-123-4567';
+            document.querySelector('input[name="yearly_income"]').value = '75000';
+            document.querySelector('input[name="where_do_you_live_now"]').value = '123 Main St, Anytown, USA';
+            document.querySelector('input[name="who_is_living_with_you"]').value = 'Jane Doe (Partner), Max (Dog)';
+            document.querySelector('input[name="any_pets"]').value = 'Yes, one dog named Max';
+        }
+    </script>
+</body>
+</html>
     </div>
 </body>
 </html>
