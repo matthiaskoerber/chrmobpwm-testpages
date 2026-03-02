@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Residential Lease Application</title>
+    <style>
+        body { font-family: serif; background: #f9f9f9; padding: 20px; }
+        .form-box { max-width: 500px; margin: auto; background: #fff; padding: 25px; border: 1px solid #ddd; }
+        h1 { font-size: 20px; text-align: center; color: #333; }
+        .row { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"] { width: 100%; padding: 8px; border: 1px solid #aaa; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; background: #333; color: #fff; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h1>Official Lease Application</h1>
+        <form>
+            <div class="row">
+                <label for="f_name">Legal Full Name</label>
+                <input type="text" id="f_name" name="legal_full_name" placeholder="As it appears on ID">
+            </div>
+            <div class="row">
+                <label for="f_email">Primary Email Contact</label>
+                <input type="text" id="f_email" name="primary_email_contact">
+            </div>
+            <div class="row">
+                <label for="f_address">Current Residence Address</label>
+                <input type="text" id="f_address" name="current_residence_address">
+            </div>
+            <div class="row">
+                <label for="f_phone">Telephone Number</label>
+                <input type="text" id="f_phone" name="telephone_number">
+            </div>
+            <div class="row">
+                <label for="f_salary">Monthly Gross Salary ($)</label>
+                <input type="text" id="f_salary" name="monthly_gross_salary">
+            </div>
+            <div class="row">
+                <label for="f_date">Intended Move-in Date</label>
+                <input type="text" id="f_date" name="intended_move_in_date" placeholder="YYYY-MM-DD">
+            </div>
+            <div class="row">
+                <label for="f_occupants">Number of Intended Occupants</label>
+                <input type="text" id="f_occupants" name="number_of_occupants">
+            </div>
+            <div class="row">
+                <label for="f_pets">Pets Disclosure (Type/Size)</label>
+                <input type="text" id="f_pets" name="pets_disclosure">
+            </div>
+            <button type="submit">Submit Official Application</button>
+        </form>
+        <div style="margin-top: 20px; text-align: center;"><a href="form_casual.html">Next Form (Casual)</a></div>
+    </div>
+</body>
+</html>
