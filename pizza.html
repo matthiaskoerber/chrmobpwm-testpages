@@ -1,26 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Pizza</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Your Pizza</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .order-container {
+            background: #fff;
+            padding: 2rem 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #d35400;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            text-align: center;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; 
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #d35400;
+        }
+        button {
+            display: block;
+            width: 100%;
+            background-color: #d35400;
+            color: white;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #e67e22;
+        }
+    </style>
 </head>
 <body>
-<h1>Pizza</h1>
-<p>Pizza is delicious, order one here.</p>
-<form>
-  " Your Name "
-  <input type="text" name="name"><br>
-  " Size "
-  <input type="text" name="size"><br>
-  " Crust "
-  <input type="text" name="crust"><br>
-  " Sauce "
-  <input type="text" name="sauce"><br>
-  " Cheese "
-  <input type="text" name="cheese"><br>
-  " Number of slices "
-  <input type="text" name="slices"><br>
-  " Number of pizzas "
-  <input type="text" name="pizzas"><br>
-  <button type="submit">Order Pizza</button>
-</form></body>
+    <div class="order-container">
+        <h1>Delicious Pizza Awaits</h1>
+        <p>Customize and order your perfect pizza below.</p>
+        <form>
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="size">Size</label>
+                <input type="text" id="size" name="size">
+            </div>
+            <div class="form-group">
+                <label for="crust">Crust</label>
+                <input type="text" id="crust" name="crust">
+            </div>
+            <div class="form-group">
+                <label for="sauce">Sauce</label>
+                <input type="text" id="sauce" name="sauce">
+            </div>
+            <div class="form-group">
+                <label for="cheese">Cheese</label>
+                <input type="text" id="cheese" name="cheese">
+            </div>
+            <div class="form-group">
+                <label for="slices">Number of Slices</label>
+                <input type="text" id="slices" name="slices">
+            </div>
+            <div class="form-group">
+                <label for="pizzas">Number of Pizzas</label>
+                <input type="text" id="pizzas" name="pizzas">
+            </div>
+            <button type="submit">Order Pizza</button>
+        </form>
+    </div>
+</body>
 </html>
