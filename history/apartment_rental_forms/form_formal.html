@@ -2,36 +2,145 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Residential Lease Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residential Lease Application | Apex Property Management</title>
     <style>
-        body { font-family: serif; background: #f9f9f9; padding: 20px; }
-        .form-box { max-width: 500px; margin: auto; background: #fff; padding: 25px; border: 1px solid #ddd; }
-        h1 { font-size: 20px; text-align: center; color: #333; }
-        .row { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
-        input[type="text"] { width: 100%; padding: 8px; border: 1px solid #aaa; box-sizing: border-box; }
-        button { width: 100%; padding: 10px; background: #333; color: #fff; border: none; cursor: pointer; }
+        body { 
+            font-family: 'Times New Roman', serif; 
+            background: #f4f4f4; 
+            margin: 0; 
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid #1a252f;
+        }
+        nav {
+            background: #34495e;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #bdc3c7;
+            text-decoration: none;
+            margin: 0 20px;
+            font-variant: small-caps;
+            letter-spacing: 1px;
+        }
+        nav a:hover { color: #fff; }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-header {
+            border-bottom: 2px solid #2c3e50;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+        h1 { font-size: 24px; text-transform: uppercase; margin: 0; color: #2c3e50; }
+        .instructions {
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            color: #666;
+        }
+        .row { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; }
+        input[type="text"] { 
+            width: 100%; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            box-sizing: border-box; 
+            font-family: serif;
+        }
+        input[type="text"]:focus { outline: 2px solid #3498db; }
+        button { 
+            width: 100%; 
+            padding: 15px; 
+            background: #2c3e50; 
+            color: #fff; 
+            border: none; 
+            cursor: pointer; 
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        button:hover { background: #1a252f; }
+        footer {
+            background: #2c3e50;
+            color: #bdc3c7;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        .next-link-container { margin-top: 30px; text-align: center; border-top: 1px solid #ddd; padding-top: 20px; }
+        .next-link { color: #2c3e50; font-weight: bold; }
     </style>
 </head>
 <body>
-    <div class="form-box">
-        <h1>Official Lease Application</h1>
+    <header>
+        <div style="font-size: 1.8rem; letter-spacing: 3px;">APEX PROPERTY MANAGEMENT</div>
+    </header>
+    <nav>
+        <a href="#">Available Listings</a>
+        <a href="#">Tenant Portal</a>
+        <a href="#">Our Policies</a>
+        <a href="#">Contact Us</a>
+    </nav>
+
+    <main>
+        <div class="form-header">
+            <h1>Official Lease Application</h1>
+            <p>Document Ref: #RA-2026-004</p>
+        </div>
+        
+        <div style="text-align: center; margin-bottom: 30px;">
+            <img src="pics/app2.jpeg" alt="Property View" style="max-width: 100%; max-height: 350px; width: 100%; object-fit: cover; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        </div>
+
+        <p class="instructions">Please provide accurate and complete information. Incomplete applications may result in a delay or denial of your request. All information is strictly confidential.</p>
+
         <form>
             <div class="row">
-                <label for="f_name">Legal Full Name</label>
-                <input type="text" id="f_name" name="legal_full_name" placeholder="As it appears on ID">
+                <label for="f_first_name">Legal First Name</label>
+                <input type="text" id="f_first_name" name="first_name" placeholder="As it appears on government-issued ID">
+            </div>
+            <div class="row">
+                <label for="f_last_name">Legal Last Name</label>
+                <input type="text" id="f_last_name" name="last_name" placeholder="As it appears on government-issued ID">
             </div>
             <div class="row">
                 <label for="f_email">Primary Email Contact</label>
                 <input type="text" id="f_email" name="primary_email_contact">
             </div>
             <div class="row">
-                <label for="f_address">Current Residence Address</label>
-                <input type="text" id="f_address" name="current_residence_address">
+                <label for="f_address">Street Address and House Number</label>
+                <input type="text" id="f_address" name="current_residence_address" placeholder="e.g. 123 Main St, Apt 4">
+            </div>
+            <div class="row" style="display: flex; gap: 20px;">
+                <div style="flex: 2;">
+                    <label for="f_city">City</label>
+                    <input type="text" id="f_city" name="city">
+                </div>
+                <div style="flex: 1;">
+                    <label for="f_state">State</label>
+                    <input type="text" id="f_state" name="state" placeholder="e.g. NY">
+                </div>
+                <div style="flex: 1;">
+                    <label for="f_zip">Zip Code</label>
+                    <input type="text" id="f_zip" name="zip_code">
+                </div>
             </div>
             <div class="row">
                 <label for="f_phone">Telephone Number</label>
-                <input type="text" id="f_phone" name="telephone_number">
+                <input type="text" id="f_phone" name="telephone_number" placeholder="(XXX) XXX-XXXX">
             </div>
             <div class="row">
                 <label for="f_salary">Monthly Gross Salary ($)</label>
@@ -47,11 +156,19 @@
             </div>
             <div class="row">
                 <label for="f_pets">Pets Disclosure</label>
-                <input type="text" id="f_pets" name="pets_disclosure">
+                <input type="text" id="f_pets" name="pets_disclosure" placeholder="Species, Breed, and Weight">
             </div>
             <button type="submit">Submit Official Application</button>
         </form>
-        <div style="margin-top: 20px; text-align: center;"><a href="form_casual.html">Next Form (Casual)</a></div>
-    </div>
+
+        <div class="next-link-container">
+            <a href="form_casual.html" class="next-link">Proceed to Casual Form &rarr;</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Apex Property Management Group. All Rights Reserved.</p>
+        <p>Equal Housing Opportunity Provider | Privacy Policy | Terms of Service</p>
+    </footer>
 </body>
 </html>

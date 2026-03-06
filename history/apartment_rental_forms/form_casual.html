@@ -2,58 +2,159 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Rent Our Place!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Our Place! | The Sunny Side Apartments</title>
     <style>
-        body { font-family: 'Comic Sans MS', cursive, sans-serif; background: #eef; padding: 20px; }
-        .box { max-width: 500px; margin: auto; background: #fff; padding: 20px; border-radius: 15px; border: 2px solid #99f; }
-        h1 { text-align: center; color: #55a; }
+        body { 
+            font-family: 'Comic Sans MS', cursive, sans-serif; 
+            background: #fdf6e3; 
+            color: #555;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #ffcc33;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 4px solid #f39c12;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #8e44ad;
+            font-weight: bold;
+        }
+        main {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .box { 
+            max-width: 500px; 
+            margin: auto; 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 25px; 
+            border: 3px dashed #99f; 
+            box-shadow: 0 10px 0 #99f;
+        }
+        h1 { text-align: center; color: #8e44ad; margin-top: 0; }
         p { margin-bottom: 15px; }
-        input[type="text"] { width: 100%; padding: 10px; border-radius: 10px; border: 1px solid #99f; box-sizing: border-box; }
-        button { width: 100%; padding: 10px; background: #99f; color: #fff; border: none; border-radius: 10px; cursor: pointer; margin-top: 15px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #2980b9; }
+        input[type="text"] { 
+            width: 100%; 
+            padding: 12px; 
+            border-radius: 15px; 
+            border: 2px solid #99f; 
+            box-sizing: border-box; 
+            font-size: 1rem;
+            outline: none;
+        }
+        input[type="text"]:focus { border-color: #8e44ad; background: #fdf9ff; }
+        .button-group { display: flex; gap: 10px; margin-top: 20px; }
+        button { 
+            flex: 1;
+            padding: 12px; 
+            background: #99f; 
+            color: #fff; 
+            border: none; 
+            border-radius: 15px; 
+            cursor: pointer; 
+            font-weight: bold;
+            font-size: 1rem;
+            transition: transform 0.1s;
+        }
+        button:active { transform: translateY(2px); }
+        button[type="submit"] { background: #2ecc71; }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            background: #eee;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        .next-link { display: block; margin-top: 15px; color: #8e44ad; }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>Interested in our flat?</h1>
-        <p>Fill this out and we'll get back to you!</p>
-        <form>
-            <p>
-                <label>When do you want to move?</label>
-                <input type="text" name="target_move_in">
-            </p>
-            <p>
-                <label>What's your name?</label>
-                <input type="text" name="your_name">
-            </p>
-            <p>
-                <label>How can we reach you by email?</label>
-                <input type="text" name="contact_email">
-            </p>
-            <p>
-                <label>Your cell phone number:</label>
-                <input type="text" name="cell_phone">
-            </p>
-            <p>
-                <label>How much do you make a year?</label>
-                <input type="text" name="yearly_income">
-            </p>
-            <p>
-                <label>Where are you living right now?</label>
-                <input type="text" name="where_do_you_live_now">
-            </p>
-            <p>
-                <label>Who else is coming with you?</label>
-                <input type="text" name="who_is_living_with_you">
-            </p>
-            <p>
-                <label>Got any pets? (Let us know!)</label>
-                <input type="text" name="any_pets">
-            </p>
-            <button type="button" onclick="fillExampleData()">Fill with Example Data</button>
-            <button type="submit">Send Message!</button>
-        </form>
-        <div style="margin-top: 20px; text-align: center;"><a href="form_minimalist.html">Next Form (Minimalist)</a></div>
-    </div>
+    <header>
+        <div style="font-size: 1.5rem; font-weight: bold; color: #8e44ad;">☀️ The Sunny Side</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Our Flats</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="intro">
+            <h2>You found us! 🎉</h2>
+            <p>We're so glad you're interested in joining our little community. We try to keep things chill here, so just tell us a bit about yourself below!</p>
+            <img src="pics/app1.jpg" alt="Sunny Apartment" style="max-width: 100%; max-height: 400px; width: 100%; object-fit: cover; border-radius: 15px; margin-top: 20px; border: 3px dashed #ffcc33;">
+        </div>
+
+        <div class="box">
+            <h1>Interested in our flat?</h1>
+            <p style="text-align: center;">Fill this out and we'll get back to you!</p>
+            <form>
+                <div class="form-group">
+                    <label>When do you want to move?</label>
+                    <input type="text" name="target_move_in" placeholder="Maybe next month?">
+                </div>
+                <div class="form-group">
+                    <label>What's your name?</label>
+                    <input type="text" name="your_name">
+                </div>
+                <div class="form-group">
+                    <label>How can we reach you by email?</label>
+                    <input type="text" name="contact_email">
+                </div>
+                <div class="form-group">
+                    <label>Your cell phone number:</label>
+                    <input type="text" name="cell_phone">
+                </div>
+                <div class="form-group">
+                    <label>How much do you make a year?</label>
+                    <input type="text" name="yearly_income">
+                </div>
+                <div class="form-group">
+                    <label>Where are you living right now?</label>
+                    <input type="text" name="where_do_you_live_now">
+                </div>
+                <div class="form-group">
+                    <label>Who else is coming with you?</label>
+                    <input type="text" name="who_is_living_with_you">
+                </div>
+                <div class="form-group">
+                    <label>Got any pets? (Let us know!)</label>
+                    <input type="text" name="any_pets">
+                </div>
+                <div class="button-group">
+                    <button type="button" onclick="fillExampleData()">Quick Fill!</button>
+                    <button type="submit">Send Message!</button>
+                </div>
+            </form>
+            <div style="margin-top: 30px; text-align: center; border-top: 1px solid #eee; padding-top: 15px;">
+                <a href="form_minimalist.html" class="next-link">Check out the Minimalist Form &rarr;</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 The Sunny Side Apartments. No boring landlords allowed! 🏠</p>
+        <p><small>123 Happy Lane, Sunshine Valley</small></p>
+    </footer>
+
     <script>
         function fillExampleData() {
             document.querySelector('input[name="target_move_in"]').value = '2026-06-01';
@@ -66,8 +167,5 @@
             document.querySelector('input[name="any_pets"]').value = 'Yes, one dog named Max';
         }
     </script>
-</body>
-</html>
-    </div>
 </body>
 </html>
