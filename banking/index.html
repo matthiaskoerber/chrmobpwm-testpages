@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Mock Bank Global</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #f4f7f9; 
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .gateway-container {
+            text-align: center;
+            max-width: 800px;
+            padding: 20px;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 40px;
+        }
+        .lang-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .lang-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .lang-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: #3949ab;
+        }
+        .flag {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .lang-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: block;
+        }
+        .entry-text {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 10px;
+        }
+
+        /* Responsive for mobile */
+        @media (max-width: 600px) {
+            .lang-grid { grid-template-columns: 1fr; }
+            body { height: auto; padding: 40px 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="gateway-container">
+    <div class="logo">🏦 Mock Bank</div>
+    <p class="subtitle">Please select your preferred language to continue to Secure Transfers</p>
+
+    <div class="lang-grid">
+        <a href="payment_en.html" class="lang-card">
+            <span class="flag">🇺🇸</span>
+            <span class="lang-name">English</span>
+            <span class="entry-text">International</span>
+        </a>
+
+        <a href="payment_de.html" class="lang-card">
+            <span class="flag">🇩🇪</span>
+            <span class="lang-name">Deutsch</span>
+            <span class="entry-text">Deutschland / Österreich</span>
+        </a>
+
+        <a href="payment_ru.html" class="lang-card">
+            <span class="flag">🇷🇺</span>
+            <span class="lang-name">Русский</span>
+            <span class="entry-text">Россия / СНГ</span>
+        </a>
+    </div>
+
+    <p style="margin-top: 50px; color: #999; font-size: 0.8rem;">
+        &copy; 2026 Mock Bank Global Services. All rights reserved.
+    </p>
+</div>
+
+</body>
+</html>

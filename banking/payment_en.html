@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Transfer | English</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <div class="lang-nav">
+        <a href="payment_en.html" class="active">🇺🇸</a>
+        <a href="payment_de.html">🇩🇪</a>
+        <a href="payment_ru.html">🇷🇺</a>
+    </div>
+
+    <h2>Send Money</h2>
+    <form id="paymentForm_en">
+        <div class="form-group">
+            <label for="recipientName_en">Recipient Name</label>
+            <input type="text" id="recipientName_en" placeholder="Full Legal Name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="accountNumber_en">Account Number / IBAN</label>
+            <input type="text" id="accountNumber_en" placeholder="Enter account number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="bankSwift_en">SWIFT / BIC Code</label>
+            <input type="text" id="bankSwift_en" placeholder="Optional for domestic transfers">
+        </div>
+        
+        <div class="form-group">
+            <label for="reference_en">Payment Reference / Memo</label>
+            <input type="text" id="reference_en" placeholder="e.g. Invoice #1234" maxlength="35">
+            <small style="color: #666;">Max 35 characters</small>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+        <div class="form-group">
+            <label for="amount_en">Amount</label>
+            <div class="amount-wrapper">
+                <span>$</span>
+                <input type="number" id="amount_en" placeholder="0.00" step="0.01" min="1" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="category_en">Transfer Category</label>
+            <select id="category_en">
+                <option value="friends">Friends & Family</option>
+                <option value="bills">Bill Payment</option>
+                <option value="business">Business Services</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn-send" id="btnSend_en">Review & Send Transfer</button>
+        <p class="security-note">🔒 Encrypted with 256-bit AES Security</p>
+    </form>
+</div>
+
+<script>
+    document.getElementById('paymentForm_en').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert("TRANSACTION SUCCESSFUL\nTo: " + document.getElementById('recipientName_en').value);
+    });
+</script>
+</body>
+</html>

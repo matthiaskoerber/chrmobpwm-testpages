@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice - INV-2026-089</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f3f4f6;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.5;
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .invoice-card {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+
+        .brand h1 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 28px;
+            letter-spacing: -0.5px;
+        }
+
+        .invoice-meta {
+            text-align: right;
+        }
+
+        .invoice-meta h2 {
+            margin: 0 0 10px 0;
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #9ca3af;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .address-group h3 {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: var(--text-light);
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 4px;
+        }
+
+        .address-group p {
+            margin: 0;
+            font-size: 14px;
+            white-space: pre-line;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th {
+            background-color: #f9fafb;
+            text-align: left;
+            font-size: 12px;
+            text-transform: uppercase;
+            padding: 12px;
+            border-bottom: 2px solid #e5e7eb;
+            color: var(--text-light);
+        }
+
+        td {
+            padding: 15px 12px;
+            border-bottom: 1px solid #f3f4f6;
+            font-size: 15px;
+        }
+
+        .totals {
+            margin-left: auto;
+            width: 300px;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+        }
+
+        .total-row.grand-total {
+            border-top: 2px solid var(--primary-color);
+            margin-top: 10px;
+            padding-top: 15px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .payment-section {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .payment-box {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        .payment-box h4 {
+            margin: 0 0 10px 0;
+            color: var(--primary-color);
+        }
+
+        .bank-details {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 5px;
+        }
+
+        .label { color: var(--text-light); }
+
+        @media print {
+            body { background: none; padding: 0; }
+            .invoice-card { box-shadow: none; border: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="invoice-card">
+    <div class="header">
+        <div class="brand">
+            <h1>Nexus Cloud Solutions GmbH</h1>
+            <p style="font-size: 14px; color: var(--text-light);">Professional IT Infrastructure Services</p>
+        </div>
+        <div class="invoice-meta">
+            <h2>Invoice</h2>
+            <p><strong>No:</strong> INV-2026-089</p>
+            <p><strong>Date:</strong> February 24, 2026</p>
+            <p><strong>Due Date:</strong> March 10, 2026</p>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="address-group">
+            <h3>Payable To</h3>
+            <p><strong>Nexus Cloud Solutions GmbH</strong>
+            12 Server Lane
+            Frankfurt, 60311
+            Germany</p>
+        </div>
+        <div class="address-group">
+            <h3>Billed To</h3>
+            <p><strong>Alex Johnson</strong>
+            456 Tech Boulevard
+            Munich, Bavaria 80331
+            Germany</p>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Description of Services</th>
+                <th style="text-align: right;">Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Server Architecture Consultation (10 hours)</td>
+                <td style="text-align: right;">€2,000.00</td>
+            </tr>
+            <tr>
+                <td>Database Migration Strategy</td>
+                <td style="text-align: right;">€500.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="totals">
+        <div class="total-row">
+            <span class="label">Subtotal</span>
+            <span>€2,500.00</span>
+        </div>
+        <div class="total-row">
+            <span class="label">VAT (19%)</span>
+            <span>€475.00</span>
+        </div>
+        <div class="total-row grand-total">
+            <span>Total Amount Due</span>
+            <span>€2,975.00</span>
+        </div>
+    </div>
+
+    <div class="payment-section">
+        <div class="payment-box">
+            <h4>Payment Instructions</h4>
+            <p style="margin-bottom: 15px;">Please remit payment via bank transfer within 14 days of receiving this invoice.</p>
+            
+            <div class="bank-details">
+                <span class="label">Bank:</span> <span>Deutsche Bank Frankfurt</span>
+                <span class="label">Account:</span> <span>Nexus Cloud Solutions GmbH</span>
+                <span class="label">IBAN:</span> <span>DE89 3704 0044 0532 0130 00</span>
+                <span class="label">SWIFT/BIC:</span> <span>DEUTDEDBFRA</span>
+                <span class="label">Reference:</span> <strong>INV-2026-089</strong>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

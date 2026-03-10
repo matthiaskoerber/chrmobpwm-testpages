@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Sicherer Transfer | Deutsch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <div class="lang-nav">
+        <a href="payment_en.html">🇺🇸</a>
+        <a href="payment_de.html" class="active">🇩🇪</a>
+        <a href="payment_ru.html">🇷🇺</a>
+    </div>
+
+    <h2>Geld senden</h2>
+    <form id="zahlungsForm_de">
+        <div class="form-group">
+            <label for="empfaengerName_de">Name des Empfängers</label>
+            <input type="text" id="empfaengerName_de" placeholder="Vollständiger Name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="kontoNummer_de">Kontonummer / IBAN</label>
+            <input type="text" id="kontoNummer_de" placeholder="Kontonummer eingeben" required>
+        </div>
+
+        <div class="form-group">
+            <label for="bankSwift_de">SWIFT / BIC Code</label>
+            <input type="text" id="bankSwift_de" placeholder="Optional für Inlandsüberweisungen">
+        </div>
+        
+        <div class="form-group">
+            <label for="verwendungszweck_de">Verwendungszweck</label>
+            <input type="text" id="verwendungszweck_de" placeholder="z.B. Rechnung #1234" maxlength="35">
+            <small style="color: #666;">Max. 35 Zeichen</small>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+        <div class="form-group">
+            <label for="betrag_de">Betrag</label>
+            <div class="amount-wrapper">
+                <span>€</span>
+                <input type="number" id="betrag_de" placeholder="0,00" step="0.01" min="1" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="kategorie_de">Kategorie</label>
+            <select id="kategorie_de">
+                <option value="friends">Freunde & Familie</option>
+                <option value="bills">Rechnungen</option>
+                <option value="business">Geschäftsdienste</option>
+                <option value="other">Andere</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn-send" id="btnSenden_de">Überprüfung & Senden</button>
+        <p class="security-note">🔒 Verschlüsselt mit 256-Bit-AES-Sicherheit</p>
+    </form>
+</div>
+
+<script>
+    document.getElementById('zahlungsForm_de').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert("TRANSAKTION ERFOLGREICH\nAn: " + document.getElementById('empfaengerName_de').value);
+    });
+</script>
+</body>
+</html>

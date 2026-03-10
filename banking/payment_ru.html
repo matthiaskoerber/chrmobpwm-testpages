@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Безопасный перевод | Русский</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <div class="lang-nav">
+        <a href="payment_en.html">🇺🇸</a>
+        <a href="payment_de.html">🇩🇪</a>
+        <a href="payment_ru.html" class="active">🇷🇺</a>
+    </div>
+
+    <h2>Отправить деньги</h2>
+    <form id="формаПлатежа_ru">
+        <div class="form-group">
+            <label for="имяПолучателя_ru">Имя получателя</label>
+            <input type="text" id="имяПолучателя_ru" placeholder="Полное имя" required>
+        </div>
+
+        <div class="form-group">
+            <label for="номерСчета_ru">Номер счета / IBAN</label>
+            <input type="text" id="номерСчета_ru" placeholder="Введите номер счета" required>
+        </div>
+
+        <div class="form-group">
+            <label for="свифтКод_ru">SWIFT / BIC код</label>
+            <input type="text" id="свифтКод_ru" placeholder="Необязательно">
+        </div>
+        
+        <div class="form-group">
+            <label for="назначениеПлатежа_ru">Назначение платежа</label>
+            <input type="text" id="назначениеПлатежа_ru" placeholder="напр. Счет №1234" maxlength="35">
+            <small style="color: #666;">Макс. 35 символов</small>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+        <div class="form-group">
+            <label for="сумма_ru">Сумма</label>
+            <div class="amount-wrapper">
+                <span>₽</span>
+                <input type="number" id="сумма_ru" placeholder="0.00" step="0.01" min="1" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="категория_ru">Категория</label>
+            <select id="категория_ru">
+                <option value="friends">Друзья и семья</option>
+                <option value="bills">Оплата счетов</option>
+                <option value="business">Бизнес услуги</option>
+                <option value="other">Другое</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn-send" id="кнопкаОтправить_ru">Проверить и отправить</button>
+        <p class="security-note">🔒 Зашифровано 256-битным AES</p>
+    </form>
+</div>
+
+<script>
+    document.getElementById('формаПлатежа_ru').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert("ТРАНЗАКЦИЯ УСПЕШНА\nКому: " + document.getElementById('имяПолучателя_ru').value);
+    });
+</script>
+</body>
+</html>
